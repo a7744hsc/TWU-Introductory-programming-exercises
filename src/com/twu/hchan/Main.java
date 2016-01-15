@@ -16,7 +16,10 @@ public class Main {
         isoscelesTriangle(3);
         System.out.println("Task 6: Given a number n, print a centered diamond.");
         diamond(3);
-
+        System.out.println("Task 7: FizzBuzz Exercise");
+        fizzBuzzExercise(50);
+        System.out.println("Task 8: Prime Factors Exercise");
+        primeFactorsExercise(30);
     }
 
 
@@ -76,6 +79,33 @@ public class Main {
                 System.out.print("*");
             }
             System.out.println();
+        }
+    }
+
+    public static void fizzBuzzExercise(int count){
+        for(int i=1; i<=count; i++){
+            if(i%3==0)
+                System.out.print("Fizz");
+            if(i%5==0)
+                System.out.print("Buzz");
+            if(i%3!=0 && i%5!=0)
+                System.out.print(i);
+            System.out.println();
+        }
+
+    }
+
+    public static void primeFactorsExercise(int num){
+        int temp =num;
+        for(int pointer=2; pointer<num;pointer++){
+
+            if(temp%pointer==0){
+                if(pointer!=2)
+                    System.out.print(",");
+                System.out.print(pointer);
+                temp/=pointer;
+                pointer--;
+            }
         }
     }
 
