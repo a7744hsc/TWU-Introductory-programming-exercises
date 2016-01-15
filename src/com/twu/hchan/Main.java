@@ -14,6 +14,9 @@ public class Main {
         drawARightTriangle(3);
         System.out.println("Task 5: Given a number n, print a centered triangle.");
         isoscelesTriangle(3);
+        System.out.println("Task 6: Given a number n, print a centered diamond.");
+        diamond(3);
+
     }
 
 
@@ -54,5 +57,27 @@ public class Main {
             System.out.println();
         }
     }
+
+    public static void diamond(int count){
+        for(int i=1; i<=count ;i++){
+            for(int k=count-i; k>0; k--){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=2*i-1 ;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=count-1; i>0 ;i--){
+            for(int k=count-i; k>0; k--){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=2*i-1 ;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
 
 }
